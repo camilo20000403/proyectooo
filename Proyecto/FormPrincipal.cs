@@ -44,10 +44,6 @@ namespace Proyecto
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
-        {
-            btninicio_Click(null,e);
-;        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -85,6 +81,8 @@ namespace Proyecto
             formulario = new T();
             formulario.TopLevel = false;
             panelContenedor.Controls.Add(formulario);
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
             panelContenedor.Tag = formulario;
             formulario.Show();
         }
@@ -99,11 +97,6 @@ namespace Proyecto
         private void btnproductos_Click(object sender, EventArgs e)
         {
             AbrirFormHija<Productos>();
-        }
-
-        private void btninicio_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija<Inicio>();
         }
 
         private void btninventario_Click(object sender, EventArgs e)
